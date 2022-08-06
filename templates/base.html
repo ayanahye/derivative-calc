@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="shortcut icon" type="image" href="{{ url_for('static', filename='images/pythonimg.png')}}">
+        <script src="{{ url_for('static', filename='main.js')}}"></script>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a class="active" id="tab1" href="index.html">Home</a></li>
+                    <li><a id="tab2" href="instructions.html">Instructions</a></li>
+                    <li><a id="tab3" href="about.html">About Me</a></li>
+                </ul>
+            </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Derivative Calculator
+{% endblock %}
+{% block content %}
+    <div>
+        <h1 class="title">Derivative Calculator</h1>
+    </div>
+    <div class="main">
+        <h2 class="subtitle">Equation:</h2>
+        <form action="http://127.0.0.1:5000/answer" method="post" id="f">
+            <input name="equation" autocomplete="off" placeholder="x^2 + 1" class="input" id="equation" type="search" min="1" onSubmit ="getEquation()">
+            <input id="submit" class="input" type="submit" onClick="getEquation()">
+        </form>
+        <h2 class="subtitle">Answer:</h2>
+        <p class="subtitle">{{ answer }}</p>
+    </div>
+
+{% endblock %}
