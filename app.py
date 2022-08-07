@@ -23,6 +23,7 @@ def about():
     return render_template("about.html")
 
 @app.route("/", methods = ['POST', 'GET'])
+@app.route("/index.html", methods = ['POST', 'GET'])
 def answer():
     if request.method == 'GET':
         return "The url is accessed directly try going to /answer to submit."
