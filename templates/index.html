@@ -3,17 +3,33 @@
     Derivative Calculator
 {% endblock %}
 {% block content %}
-    <div>
-        <h1 class="title">Derivative Calculator</h1>
-    </div>
-    <div class="main">
-        <h2 class="subtitle">Equation:</h2>
-        <form method="post" id="f">
-            <input name="equation" autocomplete="off" placeholder="x^2 + 1" class="input" id="equation" type="search" min="1" onSubmit ="getEquation()">
-            <input id="submit" class="input" type="submit" onClick="getEquation()">
-        </form>
-        <h2 class="subtitle">Answer:</h2>
-        <p class="subtitle">{{ answer }}</p>
-    </div>
+    <div class="container">
+        <main>
+            <h1 class="title">Derivative Calculator</h1>
 
+            <div class="main">
+                <h2 class="subtitle">Equation:</h2>
+
+                <form method="post" id="f">
+                    <input name="equation" autocomplete="off" placeholder="x**2" class="input" id="equation" type="search" min="1" onSubmit ="getEquation()">
+                    <input id="submit" class="input" type="submit" onClick="getEquation()">
+                </form>
+
+                <h2 class="subtitle">Answer:</h2>
+                <p class="subtitle">{{ answer }}</p>
+            </div>
+        </main>
+    
+
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>   
+    </div>
+    
+        <footer>© la brillante suju</footer>
+    </div>
 {% endblock %}
